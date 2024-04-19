@@ -9,7 +9,7 @@ import { useRouter } from 'next/navigation';
 import { ThemeProvider as NextThemesProvider } from 'next-themes';
 import type { ThemeProviderProps } from 'next-themes/dist/types';
 import { createConfig, http, WagmiProvider } from 'wagmi';
-import { mainnet } from 'wagmi/chains';
+import { arbitrum, mainnet, optimism } from 'wagmi/chains';
 
 import { Children } from '@/types';
 
@@ -22,6 +22,8 @@ const config = createConfig(
       chains: [mainnet],
       transports: {
          [mainnet.id]: http(),
+         [optimism.id]: http(),
+         [arbitrum.id]: http(),
       },
 
       // Required API Keys
