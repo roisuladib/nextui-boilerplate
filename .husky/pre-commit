@@ -1,1 +1,4 @@
-write
+pnpm write
+pnpm lint:fix
+pnpm test
+pnpm build
