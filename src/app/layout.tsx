@@ -3,6 +3,7 @@ import '@/styles/globals.css';
 import { Link } from '@nextui-org/link';
 import clsx from 'clsx';
 import { Metadata } from 'next';
+import dynamic from 'next/dynamic';
 
 import { Navbar } from '@/components/navbar';
 import { fontSans } from '@/config/fonts';
@@ -27,6 +28,8 @@ export const metadata: Metadata = {
    },
 };
 
+const ProgressBar = dynamic(() => import('@/components/progress-bar'));
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
    return (
       <html
@@ -35,6 +38,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
          <head />
          <body
             className={clsx('min-h-screen bg-background font-sans antialiased', fontSans.variable)}>
+            <ProgressBar />
             <Providers themeProps={{ attribute: 'class', defaultTheme: 'dark' }}>
                <div className="relative flex h-screen flex-col">
                   <Navbar />

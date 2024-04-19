@@ -26,6 +26,8 @@ import { Logo } from '@/components/icons';
 import { ThemeSwitch } from '@/components/theme-switch';
 import { siteConfig } from '@/config/site';
 
+import Connect from './connect';
+
 export const Navbar = () => {
    const searchInput = (
       <Input
@@ -119,6 +121,9 @@ export const Navbar = () => {
                   variant="flat">
                   Sponsor
                </Button>
+            </NavbarItem>
+            <NavbarItem className="hidden md:flex">
+               <Connect />
             </NavbarItem>
          </NavbarContent>
 
