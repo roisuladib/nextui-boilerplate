@@ -76,7 +76,7 @@ export const Navbar = () => {
                            'data-[active=true]:font-medium data-[active=true]:text-primary',
                         )}
                         color="foreground"
-                        href={item.href}>
+                        href={item.href as any}>
                         {item.label}
                      </NextLink>
                   </NavbarItem>

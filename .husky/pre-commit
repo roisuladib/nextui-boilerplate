@@ -1,3 +1,4 @@
 write
 lint:fix
 pnpm test
+pnpm build
