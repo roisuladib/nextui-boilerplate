@@ -1,4 +1,4 @@
-pnpm write
-pnpm lint:fix
-pnpm test
-pnpm build
+npm run write
+npm run lint:fix
+npm run test
+npm run build
